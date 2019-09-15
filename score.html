@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>SCOREBOARD</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-lg bg-primary shadow-lg p-3 rounded ">
+        <img class="col-xl-1" src="https://image.flaticon.com/icons/svg/484/484488.svg">
+        <a class="display-4 text-white offset-2 "><b>FOOTBALL SCORECARD</b></a>
+    </nav>
+
+    <div class="col-xl-12">
+        <div class="row">
+            <h3>1: Enter the <b class="text-primary">Team Names</b></h3>
+            <h3 class="offset-1"> 2: Enter the <b class="text-primary">Player Names</b></h3>
+            <h3 class="offset-1">3: Then <b class="text-warning">Select</b> the team from which you need to score</h3>
+        </div>
+        <div class="row">
+            <h3>4: Click on the <b class="text-danger">BALL</b></h3>
+            <h3 class="offset-2">5: Click on <b class="text-success">SHOW RESULT</b> </h3>
+        </div>
+
+    </div>
+    <div class="container-fluid h-100">
+        <div class=" col-xl-12 mt-5">
+            <div class="row ">
+                <div class="col-xl-3">
+                    <button class=" btn btn-primary" onclick="add_team()">Add Team</button><br>
+                    <input class="ml-1 mt-1" type="text" id="t_name" placeholder="Enter team names">
+                    <input class="ml-1 mt-1" type="text" id="p_names" placeholder="Enter player names with ,">
+                    <br>
+                </div>
+                <div class="col-xl-1  rounded">
+                    <div onclick="score_goal()" id="score"><img
+                            src="https://image.flaticon.com/icons/svg/861/861512.svg">
+                    </div>
+                </div>
+
+                <div class="col-xl-1 " id="list_team">
+                    <select class="bg-warning" id="team_name_holder"></select>
+                </div>
+                <div class="col-xl-1">
+                    <buttton class="btn btn-success" onclick="show_all()"><b>SHOW RESULT</b></buttton>
+
+                </div>
+
+                <div class="col-xl-4">
+                    <table class="table table-white rounded">
+                        <tr id="team_row">
+
+                        </tr>
+                        <tr id="score_row"></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12 mt-5" id="single_team">
+            <div class="row">
+                <h3>* Select the Team whose information you want to see and click <b class="text-success">SHOW TEAM</b>
+                </h3>
+            </div>
+            <div class="row">
+                <div class="col-xl-2">
+                    <button class="btn btn-success" onclick="single_team_detail()">SHOW TEAM</button>
+                </div>
+                <div class="col-xl-3">
+                    <select id="team_name_holder2"></select>
+                </div>
+                <div class="col-xl-7">
+                    <div id="single_team"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="score.js"></script>
+</body>
+
+</html>
